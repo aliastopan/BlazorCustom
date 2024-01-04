@@ -9,6 +9,8 @@ builder.Services.AddRazorComponents()
 
 builder.Services.AddFluentUIComponents();
 
+builder.Services.AddHttpContextAccessor();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
