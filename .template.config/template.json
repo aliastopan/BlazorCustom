@@ -1,0 +1,17 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Taufan Augusta",
+    "classifications": [
+      "Blazor"
+    ],
+    "name": "Blazor Server App Custom",
+    "identity": "Custom.Blazor.CSharp",
+    "groupIdentity": "Custom.Blazor.Solution",
+    "shortName": "blazor-custom",
+    "tags": {
+      "language": "C#",
+      "type": "project"
+    },
+    "sourceName": "BlazorCustom",
+    "preferNameDirectory": true
+}
