@@ -18,7 +18,7 @@
       {
         "modifiers": [
           {
-            "exclude": [ ".git/**", ".gitignore" ]
+            "exclude": [ ".git/**", ".gitignore", "*.sln" ]
           }
         ]
       }
