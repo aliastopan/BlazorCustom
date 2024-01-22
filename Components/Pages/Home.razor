@@ -8,7 +8,7 @@
 <PageTitle>Home</PageTitle>
 
 <div class="table-wrapper">
-    <FluentDataGrid Items="@_userAccounts" ResizableColumns=true Virtualize="true" ItemSize="10">
+    <FluentDataGrid Items="@_userAccounts" ResizableColumns=true Virtualize="true" ItemSize="32">
         <PropertyColumn Title="USERNAME" Property="@(x => x.Username)" Sortable="true" Style="min-width: 200px;"/>
         <PropertyColumn Title="FULL NAME" Property="@(x => x.FullName)" Sortable="true" Style="min-width: 200px;"/>
         <PropertyColumn Title="DATE OF BIRTH" Property="@(x => x.DateOfBirth)" Sortable="true" Style="min-width: 200px;"/>
