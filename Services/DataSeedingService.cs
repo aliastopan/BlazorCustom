@@ -1,6 +1,6 @@
 using BlazorCustom.Components.Models;
 
-namespace BlazorCustom.Components.Services;
+namespace BlazorCustom.Services;
 
 public class DataSeedingService
 {

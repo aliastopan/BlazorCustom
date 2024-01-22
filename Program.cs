@@ -1,6 +1,8 @@
 using Microsoft.FluentUI.AspNetCore.Components;
 using BlazorCustom.Components;
 using BlazorCustom.Middlewares;
+using BlazorCustom.Services;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +13,7 @@ builder.Services.AddRazorComponents()
 builder.Services.AddFluentUIComponents();
 
 builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<DataSeedingService>();
 
 var app = builder.Build();
 
