@@ -18,4 +18,18 @@ public class UserAccount
     public string PasswordSalt { get; set; }
     public DateTimeOffset CreationDate { get; init; }
     public DateTimeOffset LastSignedIn { get; set; }
+
+    public string FullName => $"{FirstName} {LastName}";
+    public string UserPrivileges
+    {
+        get
+        {
+            if (Privileges == null || Privileges.Count == 0)
+            {
+                return string.Empty;
+            }
+
+            return string.Join(", ", Privileges);
+        }
+    }
 }

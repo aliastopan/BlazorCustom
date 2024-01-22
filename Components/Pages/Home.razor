@@ -3,8 +3,31 @@
 @using BlazorCustom.Models
 @using BlazorCustom.Services
 
+@inject DataSeedingService _dataSeedingSvc
+
 <PageTitle>Home</PageTitle>
 
-<h1>Hello, world!</h1>
+<div class="table-wrapper">
+    <FluentDataGrid Items="@_userAccounts" ResizableColumns=true Virtualize="true" ItemSize="10">
+        <PropertyColumn Title="USERNAME" Property="@(x => x.Username)" Sortable="true" Style="min-width: 200px;"/>
+        <PropertyColumn Title="FULL NAME" Property="@(x => x.FullName)" Sortable="true" Style="min-width: 200px;"/>
+        <PropertyColumn Title="DATE OF BIRTH" Property="@(x => x.DateOfBirth)" Sortable="true" Style="min-width: 200px;"/>
+        <PropertyColumn Title="EMAIL ADDRESS" Property="@(x => x.EmailAddress)" Sortable="true" Style="min-width: 200px;"/>
+        <PropertyColumn Title="ROLE" Property="@(x => x.Role)" Sortable="true" Style="min-width: 200px;"/>
+        <PropertyColumn Title="PRIVILEGES" Property="@(x => x.UserPrivileges)" Sortable="true" Style="min-width: 200px;"/>
+        <PropertyColumn Title="SHIFT" Property="@(x => x.Shift)" Sortable="true" Style="min-width: 200px;"/>
+        <PropertyColumn Title="JOB TITLE" Property="@(x => x.JobTitle)" Sortable="true" Style="min-width: 200px;"/>
+        <PropertyColumn Title="CREATION DATE" Property="@(x => x.CreationDate)" Sortable="true" Style="min-width: 200px;"/>
+        <PropertyColumn Title="LAST SIGNED IN" Property="@(x => x.LastSignedIn)" Sortable="true" Style="min-width: 200px;"/>
+    </FluentDataGrid>
+</div>
 
-Welcome to your new Fluent Blazor app.
+@code
+{
+    private IQueryable<UserAccount>? _userAccounts;
+
+    protected override void OnInitialized()
+    {
+        _userAccounts = _dataSeedingSvc.GenerateUserAccount().AsQueryable();
+    }
+}
