@@ -1,6 +1,6 @@
 #nullable disable
 
-namespace BlazorCustom.Components.Models;
+namespace BlazorCustom.Models;
 
 public class UserAccount
 {

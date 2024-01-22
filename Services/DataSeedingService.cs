@@ -1,4 +1,4 @@
-using BlazorCustom.Components.Models;
+using BlazorCustom.Models;
 
 namespace BlazorCustom.Services;
 
